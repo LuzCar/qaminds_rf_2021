@@ -1,13 +1,4 @@
-*** Settings ***
-Documentation    Suite description
-
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Hello word
+        Log     This is de first case test
 
-*** Keywords ***
-Provided precondition
-    Setup system under test
