@@ -1,13 +1,14 @@
 *** Settings ***
-Documentation    Suite description
+Library  String
+Documentation  Examples using Test Suite Docomentation
 
-*** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+*** Variables ***
+${MESSAGE}  QA Minds
+*** Test Case ***
+Hello World with Variables
+  [Documentation]  Example Test Documentation
+  Log  ${MESSAGE}
+simple hellow world
+  Log   Hellow Wordl!
 
-*** Keywords ***
-Provided precondition
-    Setup system under test
+
