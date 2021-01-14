@@ -1,13 +1,12 @@
 *** Settings ***
-Documentation    Suite description
+Documentation    Actividad - Guardar Retorno de variable
+Library  DateTime
 
+*** Variables ***
+${my_date}
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
-
-*** Keywords ***
-Provided precondition
-    Setup system under test
+convertir fecha
+  ${date} =  Convert Date  20210113 12:05:03.111
+  log  ${date}
+  ${date} =  Add Time To Date  ${date}  7 days
+  log  ${date}
