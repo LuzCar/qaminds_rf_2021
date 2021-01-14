@@ -1,13 +1,11 @@
 *** Settings ***
-Documentation    Suite description
-
-*** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Library  SeleniumLibrary
+Library  OperatingSystem
 
 *** Keywords ***
-Provided precondition
-    Setup system under test
+ChromeDriver Setup
+  ${parent_path}  ${dir} =  Split Path  ${CURDIR}
+  Create Webdriver  Chrome  executable_path=${parent_path}\\drivers\\chromedriver.exe
+
+ChromeDriver Close
+  Close Browser
