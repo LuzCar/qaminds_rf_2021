@@ -1,13 +1,10 @@
 *** Settings ***
-Documentation    Suite description
-
+Resource  driver_setup.robot
+Test Setup  ChromeDriver Setup
+Test Teardown  ChromeDriver Close
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Open Google
+  Go to  https://www.google.com.mx/
+Open Youtube
+  Go to  https://www.youtube.com/
 
-*** Keywords ***
-Provided precondition
-    Setup system under test
