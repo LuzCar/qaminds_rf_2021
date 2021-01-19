@@ -1,12 +1,20 @@
 *** Settings ***
-Documentation    Suite description
+Resource  driver_setup.robot
+Test Setup  ChromeDriver Setup
+Test Teardown  ChromeDriver Close
 
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Test case demoqa
+  Go to  https://demoqa.com/login
+  Wait Until Element Is Visible  id:userName
+  Wait Until Element Is Visible  id:password
+  Input Text  id:userName  Luz Maria
+  Input Text  id:password  Carrillo
+  Click Button  id:login
+
+
+
+
 
 *** Keywords ***
 Provided precondition

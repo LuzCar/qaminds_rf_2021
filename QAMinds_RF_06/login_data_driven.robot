@@ -1,13 +1,10 @@
 *** Settings ***
-Documentation    Suite description
+Resource  login_template.robot
+Test Setup  ChromeDriver Setup
+Test Teardown  ChromeDriver Close
+Test Template  Login DemoQA
 
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
-
-*** Keywords ***
-Provided precondition
-    Setup system under test
+Valid User and Password  Luz maria  Carrillo  valid.png
+Invalid User  INVALID  Carrillo  invalid_user.png
+Invalid Password  Luz Maria   INVALID  invaliad_password.png
