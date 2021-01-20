@@ -17,6 +17,10 @@ Test PHTRAVLES Page
   Input Text  id:checkin  25/01/2021
   Input Text  id:checkout  29/01/2021
 
+  Click Element  //div[@class='col o2']//button[@class='btn btn-white bootstrap-touchspin-up ']
+  Capture Page Screenshot  filename=evidencia_booking_form
+
+
 
 
 
